@@ -5,7 +5,7 @@ const Rooms = () => {
     const [rooms , setRooms]=useState([]);
 
     useEffect(()=>{
-         fetch('https://hotel-booking-server-side-eight.vercel.app/rooms')
+         fetch('http://localhost:5000/rooms')
        // fetch('http://localhost:5000/rooms')
         .then(res=>res.json())
         .then(data => setRooms(data))
@@ -17,7 +17,7 @@ const Rooms = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               
               {
-                rooms.map(room=> <RoomCard key={room._id} room={room}></RoomCard>)
+                rooms?.map(room=> <RoomCard key={room._id} room={room}></RoomCard>)
               }
         </div>
       

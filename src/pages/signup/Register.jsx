@@ -41,15 +41,16 @@ const Register = () => {
                   const updatedUser={...prev, displayName:name, photoURL:photourl}
                   return updatedUser;
         })
+        Swal.fire({
+          icon: 'success',
+          title: 'Registration  Succesful',
+          showConfirmButton: false,
+          timer: 1500
+        })
         navigate(location?.state ? location.state : '/');
         console.log(result.user)
         console.log(result.user)
-        Swal.fire({
-         icon: 'success',
-         title: 'Registration  Succesful',
-         showConfirmButton: false,
-         timer: 1500
-       })
+       
       })
         // navigate after login
        

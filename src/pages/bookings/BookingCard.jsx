@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
   
-    const { _id,title, room_images, description,price_per_night,quantity,special_offers, room_size} = detail;
+    const { _id,title, date, room_images, description,price_per_night,quantity,special_offers, room_size} = detail;
 
     const handleCartDelete =(_id )=>{
         console.log(_id);
@@ -17,9 +18,12 @@ const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
            confirmButtonText: 'Yes, delete it!'
        }).then((result) => {
            if (result.isConfirmed) {
+            
+              const updatedBooking = booking.filter(item => item._id !== _id);
+              setBooking(updatedBooking);
 
            //console.log("delete confirmed");
-            fetch(`https://hotel-booking-server-side-eight.vercel.app/bookings/${_id}`, {
+            fetch(`http://localhost:5000/bookings/${_id}`, {
             //fetch(`http://localhost:5000/bookings/${_id}`, {
                method: 'DELETE'
            })
@@ -63,11 +67,11 @@ const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
    <h2 className="font-semibold font-xl"> <span className='text-green-900 font-bold'>Room Name :</span> {title}</h2>
    <h2 className="font-semibold font-xl"> <span className='text-green-900 font-bold'>Price per night :</span> {price_per_night}</h2>
    <h2 className="font-semibold font-xl"> <span className='text-green-900 font-bold'>Room size :</span> {room_size}</h2>
- 
+   <h2 className="font-semibold font-xl"> <span className='text-green-900 font-bold'>Date :</span> {date}</h2>
    </div>
     
     <div className="card-actions">
-    <button  className="btn btn-primary">Update</button>
+   <Link to={`/updateBooking/${_id}`}> <button  className="btn btn-primary">Update</button></Link> 
       <button onClick={()=>handleCartDelete(_id)} className="btn btn-primary">Delete</button>
      
     </div>

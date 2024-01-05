@@ -20,8 +20,8 @@ const RoomDetail = () => {
 
     const newItem = { ...detail, date: selectedDate, email: user?.email,id:_id };
 
-    // fetch(`https://hotel-booking-server-side-eight.vercel.app/bookings`, {
-      fetch(`https://hotel-booking-server-side-eight.vercel.app/bookings`, {
+    // fetch(`http://localhost:5000/bookings`, {
+      fetch(`http://localhost:5000/bookings`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -42,7 +42,7 @@ const RoomDetail = () => {
 
   return (
     <div className='flex items-center justify-center flex-col'>
-      room detail
+     
       <div className='flex justify-center flex-col my-3 bg-base-100 shadow-xl p-5 max-w-[920px] '>
 
         <div className='flex gap-5'>

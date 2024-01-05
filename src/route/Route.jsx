@@ -8,6 +8,7 @@ import RoomDetail from "../pages/roomDetail/RoomDetail";
 import Register from "../pages/signup/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/errorpage/ErrorPage";
+import UpdateBooking from "../pages/updateBooking/UpdateBooking";
 
 
 
@@ -36,11 +37,17 @@ const router = createBrowserRouter([
       {
         path: "/mybookings",
         element:<PrivateRoute> <MyBookings></MyBookings></PrivateRoute>,
-      },  {
+      }, 
+       {
         path: "/rooms/:id",
         element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
-         loader: ({params})=> fetch(`https://hotel-booking-server-side-eight.vercel.app/rooms/${params.id}`)
-       // loader: ({params})=> fetch(`http://localhost:5000/rooms/${params.id}`)
+         loader: ({params})=> fetch(`http://localhost:5000/rooms/${params.id}`)
+      },
+      {
+        path: "/updateBooking/:id",
+        element:<PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/updateBooking/${params.id}`)
+       
       }
       ]
     },
