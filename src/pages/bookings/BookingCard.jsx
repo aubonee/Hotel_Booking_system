@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
   
-    const { _id,title, date, room_images, description,price_per_night,quantity,special_offers, room_size} = detail;
+    const { _id,title, date, room_images, description, price_per_night, quantity, special_offers, room_size} = detail;
 
     const handleCartDelete =(_id )=>{
         console.log(_id);
@@ -37,8 +37,7 @@ const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
                        'This product is deleted from your cart.',
                        'success'
                     )
-                    const bookingdelete = booking.filter(item=>item._id!=_id)
-                    setBooking(bookingdelete);
+                    
                }
            })
           }
@@ -71,8 +70,8 @@ const BookingCard = ({detail,booking,setBooking,selectedDate,setDate}) => {
    </div>
     
     <div className="card-actions">
-   <Link to={`/updateBooking/${_id}`}> <button  className="btn btn-primary">Update</button></Link> 
-      <button onClick={()=>handleCartDelete(_id)} className="btn btn-primary">Delete</button>
+   <Link to={`/updateBooking/${_id}`}> <button  className="btn bg-[#495737] text-white">Update</button></Link> 
+      <button onClick={()=>handleCartDelete(_id)} className="btn bg-[#495737] text-white">Delete</button>
      
     </div>
   </div>

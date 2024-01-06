@@ -67,9 +67,9 @@ const Register = () => {
 
   }
     return (
-        <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/BjfvDPr/1.jpg)'}}>
+        <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/XYRMxPN/12.jpg)'}}>
         {/*  */}
-    <div className="hero-overlay " ></div>
+    <div className="" ></div>
     <div className="hero-content bg-black bg-opacity-20  flex-col ">
 <div className="text-center lg:text-left">
 <h1 className="text-5xl font-bold text-white ">Register now!</h1>

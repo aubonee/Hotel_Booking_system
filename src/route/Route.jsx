@@ -9,7 +9,8 @@ import Register from "../pages/signup/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/errorpage/ErrorPage";
 import UpdateBooking from "../pages/updateBooking/UpdateBooking";
-
+import AddReview from "../components/reviews/AddReview";
+import Reviews from "../components/reviews/Reviews";
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/mybookings",
-        element:<PrivateRoute> <MyBookings></MyBookings></PrivateRoute>,
+        element:<PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
       }, 
        {
         path: "/rooms/:id",
@@ -47,8 +48,18 @@ const router = createBrowserRouter([
         path: "/updateBooking/:id",
         element:<PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/updateBooking/${params.id}`)
-       
-      }
+      },
+      
+      {
+        path: "/addReview",
+        element:<AddReview></AddReview>,
+      }, 
+      {
+          
+        path: "/review",
+        element: <Reviews></Reviews>,
+        loader :()=> fetch('http://localhost:5000/review'),
+      },
       ]
     },
   ]);

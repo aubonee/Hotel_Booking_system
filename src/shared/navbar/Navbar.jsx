@@ -53,9 +53,9 @@ const Navbar = () => {
  
   {
     user ?
-    <button onClick={handleSignOut} className="text-sm  my-2 mx-2 btn rounded-none bg-[#FF6969]  border-2 border-spacing-y-3 border-spacing-x-7 text-[#FFFFFA] border-[#FF6969]">Sign Out</button>
+    <button onClick={handleSignOut} className="text-sm  my-2 mx-2 btn rounded-none bg-[#495737]  border-2 border-spacing-y-3 border-spacing-x-7 text-[#FFFFFA] border-[#495737]">Sign Out</button>
   :
-  <Link className=" my-2 mx-2 btn rounded-none bg-[#FF6969] border-2 border-spacing-y-3 border-spacing-x-7 text-[#FFFFFA] border-[#FF6969]" to="/login">Login</Link>
+  <Link className=" my-2 mx-2 btn rounded-none bg-[#495737] border-2 border-spacing-y-3 border-spacing-x-7 text-[#FFFFFA] border-[#495737]" to="/login">Login</Link>
   }
 </div>
 </div>
