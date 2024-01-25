@@ -42,23 +42,23 @@ const router = createBrowserRouter([
        {
         path: "/rooms/:id",
         element:<PrivateRoute><RoomDetail></RoomDetail></PrivateRoute>,
-         loader: ({params})=> fetch(`http://localhost:5000/rooms/${params.id}`)
+         loader: ({params})=> fetch(`https://hotel-booking-server-side-eight.vercel.app/rooms/${params.id}`)
       },
       {
         path: "/updateBooking/:id",
         element:<PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/updateBooking/${params.id}`)
+        loader: ({params})=> fetch(`https://hotel-booking-server-side-eight.vercel.app/updateBooking/${params.id}`)
       },
       
       {
         path: "/addReview",
-        element:<AddReview></AddReview>,
+        element:<PrivateRoute><AddReview></AddReview></PrivateRoute> ,
       }, 
       {
           
         path: "/review",
         element: <Reviews></Reviews>,
-        loader :()=> fetch('http://localhost:5000/review'),
+        
       },
       ]
     },

@@ -53,7 +53,7 @@ const Reviews = () => {
   }, []);
 
     useEffect(()=>{
-         fetch('http://localhost:5000/review')
+         fetch('https://hotel-booking-server-side-eight.vercel.app/review')
       
         .then(res=>res.json())
         .then(data => setReviews(data))
@@ -74,7 +74,7 @@ const Reviews = () => {
         //  spaceBetween={20}
         // lg:spaceBetween={15}
         slidesPerView={slidesperView}
-        spaceBetween={10}
+        spaceBetween={18}
          freeMode={true}
          pagination={{
            clickable: true,

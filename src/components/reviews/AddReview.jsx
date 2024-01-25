@@ -18,7 +18,7 @@ const AddReview = () => {
 
         console.log(newReview);
         
-      fetch('http://localhost:5000/review',{
+      fetch('https://hotel-booking-server-side-eight.vercel.app/review',{
         method:'POST',
         headers :{
           'content-type':'application/json'

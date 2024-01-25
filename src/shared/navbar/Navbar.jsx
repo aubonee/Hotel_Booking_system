@@ -17,15 +17,15 @@ const Navbar = () => {
     .catch()
   }
     const navItems =<>
-    <li><NavLink to="/" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "active" : ""}> Home</NavLink></li> 
-    <li><NavLink to="/rooms" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "active" : ""}> Rooms</NavLink></li>
-   <li><NavLink to="/mybookings" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "active" : ""}> My Bookings</NavLink></li>
-   
+    <li><NavLink to="/" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Home</NavLink></li> 
+    <li><NavLink to="/rooms" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Rooms</NavLink></li>
+   <li><NavLink to="/mybookings" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> My Bookings</NavLink></li>
+   <li><NavLink to="/review" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Reviews</NavLink></li>
     
     </>
     return (
         <div>
-        <div className="navbar bg-base-100  text-green-900 font-semibold shadow-xl ">
+        <div className="navbar fixed z-10 top-0 bg-base-100  text-green-900 font-semibold shadow-xl ">
 <div className="navbar-start">
   <div className="dropdown">
     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ const Navbar = () => {
      {navItems}
     </ul>
   </div>
-  <a className="btn btn-ghost normal-case text-xl"><img src={logo} alt="" className='w-[60px]' /></a>
+  <a className=" normal-case text-xl"><img src="https://i.ibb.co/TKmWJsm/logo2-removebg.png" alt="" className='w-[70px]' /></a>
 </div>
 <div className="navbar-center hidden lg:flex">
   <ul className="menu menu-horizontal px-1">

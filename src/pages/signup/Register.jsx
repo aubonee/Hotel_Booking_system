@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import {motion} from "framer-motion"
 // import GoogleLogin from '../login/GoogleLogin';
 
 const Register = () => {
@@ -70,6 +71,8 @@ const Register = () => {
         <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/XYRMxPN/12.jpg)'}}>
         {/*  */}
     <div className="" ></div>
+    <motion.div>
+      
     <div className="hero-content bg-black bg-opacity-20  flex-col ">
 <div className="text-center lg:text-left">
 <h1 className="text-5xl font-bold text-white ">Register now!</h1>
@@ -115,6 +118,9 @@ const Register = () => {
 <div className='mx-auto text-center text-white my-5'><p>Already have an account?</p>  <span className=' btn font-bold bg-[#495737] text-white'> <Link to="/Login">Login</Link></span></div>
 </div>
 </div>
+
+    </motion.div>
+    
   </div>
     );
 };

@@ -6,14 +6,11 @@ import axios from 'axios';
 const MyBookings = () => {
     const [booking, setBooking]=useState([])
     const {user} =useContext(AuthContext)
-     const url =`http://localhost:5000/bookings/${user?.email}`;
-   // const url =`http://localhost:5000/bookings/${user?.email}`;
-     // const url =`http://localhost:5000/${user?.email}`;
+     const url =`https://hotel-booking-server-side-eight.vercel.app/bookings/${user?.email}`;
+   
     
     useEffect(()=>
     {
-        // fetch(`http://localhost:5000/bookings/${user?.email}`).then(res=>res.json())
-        // .then(data=>setBooking(data))
         axios.get(url, {withCredentials:true})
         .then(res=>{
             setBooking(res.data)
