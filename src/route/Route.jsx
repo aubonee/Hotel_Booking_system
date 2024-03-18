@@ -13,6 +13,7 @@ import AddReview from "../components/reviews/AddReview";
 import Reviews from "../components/reviews/Reviews";
 
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -60,6 +61,7 @@ const router = createBrowserRouter([
         element: <Reviews></Reviews>,
         
       },
+   
       ]
     },
   ]);
