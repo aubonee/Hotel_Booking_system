@@ -1,5 +1,6 @@
 import  { useEffect, useState } from 'react';
 import RoomCard from './RoomCard';
+import Title from '../../shared/title/Title';
 
 const Rooms = () => {
     const [rooms , setRooms]=useState([]);
@@ -11,8 +12,8 @@ const Rooms = () => {
         .then(data => setRooms(data))
     },[])
     return (
-        <div className=" w-11/12 mx-auto ">
-            <h3 className=" font-extrabold text-center text-[#495737] text-5xl mt-5"> All Rooms</h3>
+        <div className=" w-11/12 mx-auto my-20 ">
+            <div className="  pt-10"> <Title heading="All Rooms"></Title></div>
        
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               

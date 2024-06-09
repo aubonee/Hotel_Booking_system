@@ -19,6 +19,7 @@ import '@smastrom/react-rating/style.css'
 // import required modules
 
 import { Link} from 'react-router-dom';
+import Title from '../../shared/title/Title';
 
 
 
@@ -62,9 +63,9 @@ const Reviews = () => {
     console.log(reviews);
   
     return (
-        <section className='my-12'>
-            
-             <div className='text-center text-[#495737] font-extrabold text-5xl py-5 '>Customer's <span className='text-[#E1AF55]'>Review</span></div>
+        <section className='mt-20 mb-10'>
+            <Title heading="Guest Feedback" subheading="See Why Our Customers Love Us"></Title>
+             
              <section>
         <Swiper 
         // lg:slidesPerView={3}
@@ -83,7 +84,7 @@ const Reviews = () => {
          className="mySwiper px-2"
       >
             {
-                reviews.map(review => <SwiperSlide className=' bg-[#495737] min-h-[480px]  p-2 pb-8'
+                reviews.map(review => <SwiperSlide className='  bg-base-200 text-[#495737] min-h-[480px]  p-2 pb-8'
                     key={review._id}
                 >
                     <div className='flex flex-col justify-center items-center my-6 mx-3'>
@@ -93,8 +94,8 @@ const Reviews = () => {
                             value={review.rating}
                             readOnly
                         />
-                        <h3 className="pt-5 text-2xl text-orange-400">{review.name}</h3>
-                        <p className="pt-5 pb-3 min-w-[300px] text-white text-center">{review.review}</p>
+                        <h3 className="pt-5 text-2xl ">{review.name}</h3>
+                        <p className="pt-5 pb-3 min-w-[300px] text-gray-700 text-center">{review.review}</p>
                     </div>
                 </SwiperSlide>)
             }
@@ -107,7 +108,7 @@ const Reviews = () => {
             </section>
             <section>
                 <div className='flex justify-center my-10'>
-                <Link to={'/addReview'}> <button className='btn bg-[#E1AF55] text-white'>Add Review</button> </Link>   
+                <Link to={'/addReview'}> <button className='btn bg-yellow-500 hover:bg-[#E1AF55] text-white rounded-none'>Add Review</button> </Link>   
                 </div>
             </section>
         </section>

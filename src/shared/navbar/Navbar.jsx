@@ -3,7 +3,7 @@ import { useContext} from "react";
 import logo from "../../assets/images/Logo.png"
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from "../../providers/AuthProvider";
-
+import '../../App.css'
 const Navbar = () => {
 
 
@@ -17,21 +17,22 @@ const Navbar = () => {
     .catch()
   }
     const navItems =<>
-    <li><NavLink to="/" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Home</NavLink></li> 
-    <li><NavLink to="/rooms" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Rooms</NavLink></li>
-   <li><NavLink to="/mybookings" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> My Bookings</NavLink></li>
-   <li><NavLink to="/review" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "font-bold text-lg" : "text-lg"}> Reviews</NavLink></li>
+    <li><NavLink to="/" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? "  bg-transparent hover:bg-transparent active:bg-transparent font-bold text-lg" : " bg-transparent hover:bg-transparent active:bg-transparenttext-lg"}> Home</NavLink></li> 
+    <li><NavLink to="/rooms" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? " bg-transparent hover:bg-transparent active:bg-transparent font-bold text-lg" : " bg-transparent hover:bg-transparent active:bg-transparent text-lg" }> Rooms</NavLink></li>
+   <li><NavLink to="/mybookings" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? " bg-transparent hover:bg-transparent active:bg-transparent font-bold text-lg" : "bg-transparent hover:bg-transparent active:bg-transparent text-lg"}> My Bookings</NavLink></li>
+   <li><NavLink to="/review" className={({ isActive, isPending }) =>  isPending ? "pending" : isActive ? " bg-transparent hover:bg-transparent active:bg-transparent font-bold text-lg" : "bg-transparent hover:bg-transparent active:bg-transparent text-lg"}> Reviews</NavLink></li>
     
     </>
     return (
-        <div>
-        <div className="navbar  z-10 top-0 bg-base-100  text-green-900 font-semibold shadow-xl ">
+       
+       <div className=" font-marcellus w-full flex justify-center items-center bg-black  text-black">
+         <div className="  mx-auto bg-base-100 bg-opacity-50 navbar absolute z-10 top-0  text-black font-semibold  border-b border-base-200">
 <div className="navbar-start">
   <div className="dropdown">
-    <label tabIndex={0} className="btn btn-ghost lg:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+    <label tabIndex={0} className=" lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
-    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 pr-5 shadow bg-base-100 rounded-none text-black w-52">
      {navItems}
     </ul>
   </div>
@@ -59,7 +60,9 @@ const Navbar = () => {
   }
 </div>
 </div>
-      </div>
+
+       </div>
+     
     );
 };
 

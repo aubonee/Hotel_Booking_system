@@ -1,0 +1,6 @@
+.book-button{
+    display:none;
+}
+.image-box:hover .book-button{
+ display:block;
+}

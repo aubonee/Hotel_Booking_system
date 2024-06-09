@@ -4,8 +4,10 @@
 
 .font-marcellus{
     font-family: "Marcellus", serif;
-    font-weight: 800;
+    font-weight: 400;
     font-style: bold;
+    text-align: center;
+    
   }
   
 
@@ -14,4 +16,31 @@
   font-optical-sizing: auto;
   font-weight:400;
   font-style: normal;
+  font-size: 16px;
+  text-align: center;
 }
+/* .imageFrame{
+   
+    position:relative;
+    left:-10px;
+    bottom:-10px;
+   right:10px;
+    top:10px;
+  
+    padding: 5px;
+}
+ .imageFrame:hover {
+   position: static;
+  margin: 0px;
+  
+
+
+
+} 
+
+.imageBox{
+   
+}
+.imageFrame:hover  .imageBox{
+   
+} */
