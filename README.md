@@ -43,4 +43,4 @@ Currently, two official plugins are available:
   - Experience a responsive design crafted with React and Tailwind CSS.
 
   # Live Link:
-  https://ossified-mark.surge.sh
+-  https://prismatic-granita-cd91ef.netlify.app
